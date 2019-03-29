@@ -8,3 +8,106 @@
  *= require_self
  *= require_tree .
 */
+
+$color-green: #23c5b3;
+$color-blue: #1f6ce4;
+$color-grey: #787878;
+$transparent-white: rgba(255, 255, 255, 0.95);
+$transparent-grey: rgba(200, 200, 200, 0.95);
+$transparent-green: rgba(35, 197, 179, 0.5);
+$transparent-blue: rgba(31, 108, 228, 0.5);
+
+
+.bg-green { background-color: $color-green }
+.bg-blue { background-color: $color-blue }
+.bg-grey { background-color: $color-grey }
+.bg-white { background-color: white }
+.transparent-grey { background-color: $transparent-grey }
+.transparent-white { background-color: $transparent-white }
+
+
+
+label.nav-link {
+  padding: 13px 8px;
+}
+
+#spree-header {
+  background: $transparent-grey;
+  margin-top: 5px !important;
+}
+
+#spree-header #header {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.btn-success {
+  background-color: $color-green !important;
+  border-color: $color-green !important;
+}
+
+.navbar {
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav-bar {
+  padding: 0 !important;
+}
+
+a.cart-info {
+  position: absolute;
+  right: 0;
+}
+
+.taxonomy-root {
+  color: $color-grey;
+  font-weight: 200 !important;
+  text-transform: uppercase;
+  font-size: 1.1em !important;
+}
+
+.list-group {
+  margin-bottom: 20px !important;
+}
+
+.taxonomy-root, .product-body a span.info {
+  color: $color-grey;
+  font-weight: 200 !important;
+  font-size: 1.1em !important;
+}
+
+.taxonomy-root, .product-body a:hover {
+  text-decoration: none !important;
+}
+
+.panel-body {
+    padding: 15px 15px 0px 15px;
+}
+
+.panel-footer {
+    padding-bottom: 5px;
+    background-color: #ffffff;
+    border-top: none;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#spree-header .nav a:hover, #spree-header .nav a:focus {
+    background: none;
+}
+
+.alert-info {
+    color: black !important;
+    background-color: $transparent-green !important;
+    border-color: $color-green !important;
+}
+
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff !important;
+    cursor: default;
+    background-color: $color-green;
+    border-color: $color-green;
+}
