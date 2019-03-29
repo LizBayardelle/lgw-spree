@@ -1,0 +1,96 @@
+
+<!-- Header -->
+<header class="py-5 mb-5 bg-image-full bg-image-stripe" style="background-image: url(<%= asset_path "dyson-for-business.jpg" %>)">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-12">
+        <h1 class="display-4 mt-5 mb-2">Laguna Greenworks</h1>
+        <p class="lead mb-5">Authorized Distributor of Dyson Professional Products</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-8 mb-5">
+      <h2>What We Do</h2>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
+      <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+    </div>
+    <div class="col-md-4 mb-5">
+      <h2>Contact Us</h2>
+      <hr>
+      <address>
+        <strong>Southern California</strong>
+        <br>309 Agate Street
+        <br>Laguna Beach,CA 92651
+        <br><%= tel_to("949-371-3310") %>
+        <br><%= mail_to "info@lagunagreenworks.com" %>
+      </address>
+      <address>
+        <strong>Northern California</strong>
+        <br><%= tel_to("650-730-6523") %>
+        <br><%= mail_to "ellenm@lagunagreenworks.com" %>
+      </address>
+
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <div class="row">
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <%= image_tag "hand-dryers.jpg", class: "card-img-top" %>
+        <div class="card-body">
+          <h4 class="card-title">Hand Dryers</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
+        </div>
+        <div class="card-bottom text-center">
+          <a href="#" class="btn-bubble">Find Out More!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <%= image_tag "lighting.jpg", class: "card-img-top" %>
+        <div class="card-body">
+          <h4 class="card-title">Lighting</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+        </div>
+        <div class="card-bottom text-center">
+          <a href="#" class="btn-bubble">Find Out More!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-5">
+      <div class="card h-100">
+        <%= image_tag "air-quality.jpg", class: "card-img-top" %>
+        <div class="card-body">
+          <h4 class="card-title">Air Quality</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+        </div>
+        <div class="card-bottom text-center">
+          <a href="#" class="btn-bubble">Find Out More!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+
+<script>
+  $(document).ready(function() {
+    $('.card-img-top').matchHeight();
+    $('.card-title').matchHeight();
+    $('.card-text').matchHeight();
+  });
+</script>

@@ -1,0 +1,48 @@
+<footer class="container-fluid pt-3">
+  <div class="container">
+     <div class="row">
+        <div class="col-md-8">
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="logo-part">
+                    <%= image_tag "Logo.png", class: "w-50 logo-footer" %>
+                    <p>
+                      <strong>Southern California</strong>
+                      <br>309 Agate Street
+                      <br>Laguna Beach,CA 92651
+                      <br><%= tel_to("949-371-3310") %>
+                      <br><%= mail_to "info@lagunagreenworks.com" %>
+                    </p>
+                    <p>
+                      <strong>Northern California</strong>
+                      <br><%= tel_to("650-730-6523") %>
+                      <br><%= mail_to "ellenm@lagunagreenworks.com" %>
+                    </p>
+                 </div>
+              </div>
+              <div class="col-md-6 px-4">
+                <div class="row ">
+                  <h6>Important Links</h6>
+                  <ul>
+                    <li> <%= link_to "Home", main_app.root_path %> </li>
+                    <li> <a href="#"> About Us</a> </li>
+                    <li> <a href="#"> Customer Service</a> </li>
+                    <li> <a href="#"> Policies and Notices</a> </li>
+                    <li> <a href="#"> Warranty Information</a> </li>
+                  </ul>
+                </div>
+              </div>
+           </div>
+        </div>
+        <div class="col-md-4">
+          <h6>Our Mission</h6>
+          <p>But horizontal lines can only be a full pixel high.</p>
+          <%= link_to "Products", spree.root_path, class: "btn-bubble" %><br>
+          <a href="#" class="btn-bubble"> Contact Us</a>
+        </div>
+     </div>
+  </div>
+  <div class="text-center py-4">
+    <p>Copyright &copy; <%= Time.current.year %> <em>Laguna Greenworks</em></p>
+  </div> <!-- copywright -->
+</footer>

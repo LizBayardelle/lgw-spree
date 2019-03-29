@@ -1,0 +1,302 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+$color-green: #23c5b3;
+$color-blue: #1f6ce4;
+$color-grey: #787878;
+$transparent-white: rgba(255, 255, 255, 0.95);
+
+.bg-green { background-color: $color-green }
+.bg-blue { background-color: $color-blue }
+.bg-grey { background-color: $color-grey }
+.bg-white { background-color: white }
+
+html { font-size: 100%; }
+* { font-family: 'Open Sans', sans-serif; }
+
+.all-but-footer { min-height: 60vh; }
+
+h1 { font-weight: 200 !important; }
+h2 { color: $color-grey; font-weight: 200 !important; }
+h3 { color: $color-grey; font-weight: 200 !important; text-transform: uppercase; font-size: 1.3em !important; }
+p { font-weight: 300 }
+
+
+
+
+//------------------------//
+//------------------------//
+//-------- NAVBAR --------//
+//------------------------//
+//------------------------//
+
+a.navbar-brand img {
+  height: 50px;
+}
+
+.nav-link, .menu label {
+  color: $color-grey !important;
+  font-weight: 300;
+  transition: text-shadow .3s;
+  margin-bottom: 0 !important;
+}
+
+.nav-link:hover , .menu label:hover {
+  text-shadow: 0 0 .6px $color-grey, 0 0 .6px $color-grey;
+}
+
+/*hide the inputs*/
+input{display:none}
+
+/*show the second levele menu of the selected voice*/
+input:checked ~ ul.submenu{
+  max-height:300px;
+  transition:max-height 0.5s ease-in;
+}
+
+/*style for the second level menu*/
+ul.submenu{
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background:  $transparent-white;
+  transition: max-height 0.5s ease-out;
+  position: absolute;
+  min-width: 100%;
+  z-index:  100;
+}
+
+ul.submenu li a {
+  display: block;
+  padding: 12px;
+  color:  $transparent-white;
+  text-decoration: none;
+  transition: background .3s;
+  white-space: nowrap;
+}
+
+ul.submenu li a:hover{
+  background: rgba(230,230,230,.5);
+}
+
+
+
+
+
+
+
+
+
+//------------------------//
+//------------------------//
+//--------- SPREE --------//
+//------- OVERRIDES ------//
+//------------------------//
+//------------------------//
+
+a {
+  color: $color-green !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: $color-green !important;
+    border-color: $color-green !important;
+}
+
+
+
+
+
+
+
+
+//------------------------//
+//------------------------//
+//-------- IMAGES --------//
+//------------------------//
+//------------------------//
+
+.bg-image-full {
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.bg-image-stripe {
+  height: 90vh;
+}
+
+@media screen and (min-width: 768px) {
+  .bg-image-stripe {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bg-image-stripe {
+    height: 500px;
+  }
+}
+
+
+
+
+
+
+
+
+//------------------------//
+//------------------------//
+//-------- BUTTONS -------//
+//------------------------//
+//------------------------//
+
+.btn-bubble {
+  color: $color-green;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 43px;
+  font-size: 13px;
+  padding: 7px 30px;
+  line-height: 47px;
+}
+
+.btn-bubble:hover {
+  text-decoration: none;
+  color: $color-blue !important;
+  border-color: $color-blue;
+}
+
+
+
+
+
+
+
+
+
+//------------------------//
+//------------------------//
+//--------- CARDS --------//
+//------------------------//
+//------------------------//
+
+.card .card-bottom {
+  padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+//------------------------//
+//------------------------//
+//-------- FOOTER --------//
+//------------------------//
+//------------------------//
+
+footer .logo-footer {
+  margin-bottom: 10px;
+}
+
+footer {
+  color: $color-grey;
+}
+
+footer p, footer a {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer h6 {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+footer h6:after {
+    position: absolute;
+    content: "";
+    background: grey;
+    width: 50px;
+    height: 1px;
+    left: 0;
+    bottom: -10px;
+}
+
+footer .form-footer input[type="text"] {
+    border: none;
+    border-radius: 16px 0 0 16px;
+    outline: none;
+    padding-left: 10px;
+
+}
+
+footer ::placeholder {
+    font-size: 10px;
+    padding-left: 10px;
+    font-style: italic;
+}
+
+footer .form-footer input[type="button"] {
+    border: none;
+    background:#232323;
+    margin-left: -5px;
+    color: #fff;
+    outline: none;
+    border-radius: 0 16px 16px 0;
+    padding: 2px 12px;
+}
+
+footer .social .fa {
+    color: grey;
+    font-size: 22px;
+    padding: 10px 15px;
+    background: #3c3c3c;
+}
+
+footer ul li {
+    list-style: none;
+    display: block;
+}
+
+footer ul  {
+   padding-left: 0;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: grey;
+  text-decoration:none;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: $color-grey !important;
+
+}
+
+footer .logo-part {
+    border-right: 1px solid grey;
+    height: 100%;
+}

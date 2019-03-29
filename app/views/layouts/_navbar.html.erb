@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <div class="container">
+    <%= link_to main_app.root_path, class: "navbar-brand" do %>
+      <%= image_tag "Logo.png" %>
+    <% end %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto menu">
+
+        <li class="nav-item">
+          <input id="check01" type="checkbox" name="menu"/>
+          <label for="check01" class="nav-link">Dyson for Business</label>
+          <ul class="submenu">
+            <li><%= link_to "Hand Dryers", main_app.page_path('airblades') %></li>
+            <li><%= link_to "Lighting", main_app.page_path('lighting') %></li>
+            <li><%= link_to "Air Quality", main_app.page_path('air-quality') %></li>
+            <li><%= link_to "Accessories", main_app.page_path('accessories') %></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "Store", spree.root_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "Resources", main_app.page_path('resources'), class: "nav-link" %>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
