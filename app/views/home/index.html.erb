@@ -20,7 +20,7 @@
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-      <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+      <a class="btn btn-primary" href="#">Call to Action &raquo;</a>
     </div>
     <div class="col-md-4 mb-5">
       <h2>Contact Us</h2>
@@ -37,7 +37,8 @@
         <br><%= tel_to("650-730-6523") %>
         <br><%= mail_to "ellenm@lagunagreenworks.com" %>
       </address>
-
+      <strong>Online Support</strong>
+      <br><%= link_to "Contact Us", main_app.new_contact_path, class: "btn-bubble" %>
     </div>
   </div>
   <!-- /.row -->
@@ -45,8 +46,8 @@
   <div class="row">
     <div class="col-md-4 mb-5">
       <div class="card h-100">
-        <%= image_tag "hand-dryers.jpg", class: "card-img-top" %>
-        <div class="card-body">
+        <%= image_tag "hand-dryers.jpg", class: "card-img-top h-25" %>
+        <div class="card-body h-50">
           <h4 class="card-title">Hand Dryers</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
         </div>
@@ -57,8 +58,8 @@
     </div>
     <div class="col-md-4 mb-5">
       <div class="card h-100">
-        <%= image_tag "lighting.jpg", class: "card-img-top" %>
-        <div class="card-body">
+        <%= image_tag "lighting.jpg", class: "card-img-top h-25" %>
+        <div class="card-body h-50">
           <h4 class="card-title">Lighting</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
         </div>
@@ -69,8 +70,8 @@
     </div>
     <div class="col-md-4 mb-5">
       <div class="card h-100">
-        <%= image_tag "air-quality.jpg", class: "card-img-top" %>
-        <div class="card-body">
+        <%= image_tag "air-quality.jpg", class: "card-img-top h-25" %>
+        <div class="card-body h-50">
           <h4 class="card-title">Air Quality</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
         </div>
@@ -84,13 +85,3 @@
 
 </div>
 <!-- /.container -->
-
-
-
-<script>
-  $(document).ready(function() {
-    $('.card-img-top').matchHeight();
-    $('.card-title').matchHeight();
-    $('.card-text').matchHeight();
-  });
-</script>

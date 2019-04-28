@@ -15,17 +15,25 @@
  */
 
 
-$color-green: #23c5b3;
-$color-blue: #1f6ce4;
-$color-grey: #787878;
-$transparent-white: rgba(255, 255, 255, 0.95);
+ $color-green: #23c5b3;
+ $color-blue: #1f6ce4;
+ $color-grey: #787878;
+ $transparent-white: rgba(255, 255, 255, 0.95);
+ $transparent-grey: rgba(200, 200, 200, 0.95);
+ $transparent-green: rgba(35, 197, 179, 0.5);
+ $transparent-blue: rgba(31, 108, 228, 0.5);
 
-.bg-green { background-color: $color-green }
-.bg-blue { background-color: $color-blue }
-.bg-grey { background-color: $color-grey }
-.bg-white { background-color: white }
 
-html { font-size: 100%; }
+ .bg-green { background-color: $color-green }
+ .bg-blue { background-color: $color-blue }
+ .bg-grey { background-color: $color-grey }
+ .bg-white { background-color: white }
+ .transparent-grey { background-color: $transparent-grey }
+ .transparent-white { background-color: $transparent-white }
+
+
+
+html { font-size: 100%; scroll-behavior: smooth; }
 * { font-family: 'Open Sans', sans-serif; }
 
 .all-but-footer { min-height: 60vh; }
@@ -33,10 +41,24 @@ html { font-size: 100%; }
 h1 { font-weight: 200 !important; }
 h2 { color: $color-grey; font-weight: 200 !important; }
 h3 { color: $color-grey; font-weight: 200 !important; text-transform: uppercase; font-size: 1.3em !important; }
-p { font-weight: 300 }
+p, li { font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; line-height: 18px }
 
+.text-page h1 { margin: 20px 0 20px 0 }
+.text-page h2 { font-weight: 400 !important; color: black; }
+.text-page h3 { color: $color-green; }
 
+.buffer { height: 50px; width: 100%; }
+.half-buffer { height: 25px; width: 100%; }
 
+label { text-transform: capitalize; }
+.form-submit {
+    display: block;
+    height: 47px;
+    line-height: 27px !important;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
 //------------------------//
 //------------------------//
@@ -216,6 +238,7 @@ a {
 //------------------------//
 //------------------------//
 
+
 footer .logo-footer {
   margin-bottom: 10px;
 }
@@ -292,11 +315,29 @@ footer ul li a{
 
 footer a:hover {
     text-decoration: none;
-    color: $color-grey !important;
+    color: $color-blue !important;
 
 }
 
 footer .logo-part {
     border-right: 1px solid grey;
     height: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+  footer * {
+    text-align: center;
+  }
+
+  footer h6:after {
+      position: absolute;
+      content: "";
+      background: none;
+      width: 50px;
+      height: 1px;
+      left: 0;
+      bottom: -10px;
+  }
+
 }

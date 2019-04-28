@@ -15,6 +15,7 @@
 //= require bootstrap
 //= require jquery-ui
 //= require activestorage
+//= require jquery.matchHeight
 //= require_tree .
 
 
