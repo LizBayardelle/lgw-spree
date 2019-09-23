@@ -16,6 +16,7 @@
             <li><%= link_to "Hand Dryers", main_app.page_path('airblades') %></li>
             <li><%= link_to "Lighting", main_app.page_path('lighting') %></li>
             <li><%= link_to "Air Quality", main_app.page_path('air-quality') %></li>
+            <li><%= link_to "Floor Care", main_app.page_path('floor-care') %></li>
             <li><%= link_to "Accessories", main_app.page_path('accessories') %></li>
           </ul>
         </li>
@@ -26,6 +27,10 @@
 
         <li class="nav-item">
           <%= link_to "Resources", main_app.page_path('resources'), class: "nav-link" %>
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "About Us", main_app.new_contact_path, class: "nav-link" %>
         </li>
 
       </ul>

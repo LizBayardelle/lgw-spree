@@ -20,7 +20,7 @@
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-      <a class="btn btn-primary" href="#">Call to Action &raquo;</a>
+      <%= link_to "About Us", main_app.new_contact_path, class: "btn btn-primary" %>
     </div>
     <div class="col-md-4 mb-5">
       <h2>Contact Us</h2>
@@ -44,44 +44,60 @@
   <!-- /.row -->
 
   <div class="row">
-    <div class="col-md-4 mb-5">
+    <div class="col-sm-6 col-lg-3 mb-5">
       <div class="card h-100">
-        <%= image_tag "hand-dryers.jpg", class: "card-img-top h-25" %>
+        <%= image_tag "hand-dryers.jpg", class: "card-img-top" %>
         <div class="card-body h-50">
           <h4 class="card-title">Hand Dryers</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
         </div>
         <div class="card-bottom text-center">
-          <a href="#" class="btn-bubble">Find Out More!</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-5">
+          <%= link_to "See More", main_app.page_path('airblades'), class: "btn-bubble" %>
+        </div> <!-- card bottom -->
+      </div> <!-- card -->
+    </div> <!-- col -->
+
+    <div class="col-sm-6 col-lg-3 mb-5">
       <div class="card h-100">
-        <%= image_tag "lighting.jpg", class: "card-img-top h-25" %>
+        <%= image_tag "lighting.jpg", class: "card-img-top" %>
         <div class="card-body h-50">
           <h4 class="card-title">Lighting</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
         </div>
         <div class="card-bottom text-center">
-          <a href="#" class="btn-bubble">Find Out More!</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-5">
+          <%= link_to "See More", main_app.page_path('lighting'), class: "btn-bubble" %>
+        </div> <!-- card bottom -->
+      </div> <!-- card -->
+    </div> <!-- col -->
+
+    <div class="col-sm-6 col-lg-3 mb-5">
       <div class="card h-100">
-        <%= image_tag "air-quality.jpg", class: "card-img-top h-25" %>
+        <%= image_tag "air-quality.jpg", class: "card-img-top" %>
         <div class="card-body h-50">
           <h4 class="card-title">Air Quality</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
         </div>
         <div class="card-bottom text-center">
-          <a href="#" class="btn-bubble">Find Out More!</a>
+          <%= link_to "See More", main_app.page_path('air-quality'), class: "btn-bubble" %>
+        </div> <!-- card bottom -->
+      </div> <!-- card -->
+    </div> <!-- col -->
+
+    <div class="col-sm-6 col-lg-3 mb-5">
+      <div class="card h-100">
+        <%= image_tag "floor-care.jpg", class: "card-img-top" %>
+        <div class="card-body h-50">
+          <h4 class="card-title">Floor Care</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- /.row -->
+        <div class="card-bottom text-center">
+          <%= link_to "See More", main_app.page_path('floor-care'), class: "btn-bubble" %>
+        </div> <!-- card bottom -->
+      </div> <!-- card -->
+    </div> <!-- col -->
+
+
+  </div> <!-- row -->
 
 </div>
 <!-- /.container -->
