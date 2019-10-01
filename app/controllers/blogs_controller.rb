@@ -5,10 +5,15 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.where(published: true, big_feature: false, featured: false, most_popular: false).order("published_at DESC")
+    @published_blogs = Blog.where(published: true).order("published_at DESC")
     @drafts = Blog.where(published: false)
     @big_feature = Blog.where(big_feature: true, published: true).limit(1)
     @featured = Blog.where(featured: true, published: true).limit(3)
     @most_popular = Blog.where(most_popular: true, published: true).limit(3)
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false }
+    end
   end
 
   # GET /blogs/1

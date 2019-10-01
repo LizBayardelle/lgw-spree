@@ -18,6 +18,7 @@
 //= require jquery.matchHeight
 //= require font_awesome5
 //= require tinymce
+//= require tinymce-jquery
 
 
 

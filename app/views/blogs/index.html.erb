@@ -36,20 +36,20 @@
 
   <div class="row">
 
-    <div class="col-12" id="big-feature">
+    <div class="col-12 pt-3" id="big-feature">
       <% @big_feature.each do |blog| %>
         <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
       <% end %> <!-- each do -->
     </div> <!-- col -->
 
-    <div class="col-sm-6" id="most-popular">
+    <div class="col-sm-6 pt-3" id="most-popular">
       <h2>Most Popular</h2>
       <% @most_popular.each do |blog| %>
         <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
       <% end %> <!-- each blog do -->
     </div> <!-- col -->
 
-    <div class="col-sm-6" id="featured">
+    <div class="col-sm-6 pt-3" id="featured">
       <h2>Featured</h2>
       <% @featured.each do |blog| %>
         <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
