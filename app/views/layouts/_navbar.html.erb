@@ -21,17 +21,11 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <%= link_to "Store", spree.root_path, class: "nav-link" %>
-        </li>
+        <li class="nav-item"><%= link_to "Store", spree.root_path, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to "Blog", main_app.blogs_path, class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to "Resources", main_app.page_path('resources'), class: "nav-link" %></li>
+        <li class="nav-item"><%= link_to "About Us", main_app.new_contact_path, class: "nav-link" %></li>
 
-        <li class="nav-item">
-          <%= link_to "Resources", main_app.page_path('resources'), class: "nav-link" %>
-        </li>
-
-        <li class="nav-item">
-          <%= link_to "About Us", main_app.new_contact_path, class: "nav-link" %>
-        </li>
 
       </ul>
     </div>

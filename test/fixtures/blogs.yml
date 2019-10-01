@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  teaser: MyString
+  body: MyText
+  published: false
+  published_at: 2019-09-24 15:28:07
+  featured_image_url: MyString
+  user: one
+  pin_1_url: MyString
+  pin_2_url: MyString
+  pin_3_url: MyString
+  pin_4_url: MyString
+
+two:
+  title: MyString
+  teaser: MyString
+  body: MyText
+  published: false
+  published_at: 2019-09-24 15:28:07
+  featured_image_url: MyString
+  user: two
+  pin_1_url: MyString
+  pin_2_url: MyString
+  pin_3_url: MyString
+  pin_4_url: MyString

@@ -1,0 +1,61 @@
+<header class="py-5 bg-image-full bg-image-stripe" style="background-image: url(<%= asset_path "drops-of-water-mask.jpg" %>);">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-12">
+        <h1 class="display-4 mt-5 mb-2">The Blog</h1>
+        <p class="lead mb-5">Your Source for Qualified Knowledge (or Other Tagline)</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<% if current_spree_user && current_spree_user.admin? %>
+  <section class="admin container">
+    <div class="row">
+      <div class="col text-left pt-3">
+        <h2>Draft Posts</h2>
+        <% @blogs.each do |blog| %>
+          <% if !blog.published %>
+            <p class="my-1 py-0"><%= link_to blog.title, edit_blog_path(blog) %></p>
+          <% end %>
+        <% end %>
+      </div> <!-- drafts col -->
+      <div class="col text-right pt-3">
+        <%= link_to "Create New Blog", new_blog_path, class: "btn btn-primary" %>
+        <%= link_to "Blog Management", home_blogs_path, class: "btn btn-primary" %>
+      </div> <!-- create new col -->
+    </div> <!-- row -->
+  </section>
+
+  <hr>
+<% end %>
+
+
+<main class="container">
+
+  <div class="row">
+
+    <div class="col-12" id="big-feature">
+      <% @big_feature.each do |blog| %>
+        <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
+      <% end %> <!-- each do -->
+    </div> <!-- col -->
+
+    <div class="col-sm-6" id="most-popular">
+      <h2>Most Popular</h2>
+      <% @most_popular.each do |blog| %>
+        <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
+      <% end %> <!-- each blog do -->
+    </div> <!-- col -->
+
+    <div class="col-sm-6" id="featured">
+      <h2>Featured</h2>
+      <% @featured.each do |blog| %>
+        <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
+      <% end %> <!-- each blog do -->
+    </div> <!-- col -->
+
+  </div> <!-- row -->
+
+</main> <!-- page container -->

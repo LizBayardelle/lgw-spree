@@ -1,0 +1,30 @@
+<%= link_to blog_path(blog) do %>
+  <div class="blog-title-box my-3">
+    <div class="row">
+
+      <div class="image background-image col-md-4"
+        style="background-image: url('<%= blog.featured_image_url %>')">
+      </div> <!-- image col -->
+
+      <div class="text col-sm-8 px-4 py-3">
+        <h3>
+          <%= blog.title %>
+        </h3>
+        <% if blog.big_feature %><p><%= blog.teaser %></p><% end %>
+        <p class="tags">
+          <% blog.tag_list.each do |tag| %>
+            <%= link_to tag, tagged_path(tag: tag) %>
+          <% end %>
+        </p>
+        <p class="author">
+          By <%= Spree::User.find(blog.spree_user_id).email %> on <%= blog.published_at.in_time_zone("America/Los_Angeles").strftime("%B %d, %Y") %>
+          <% if current_spree_user && current_spree_user.admin? %>
+             <%= link_to '<i class="fas fa-pen"></i>'.html_safe, edit_blog_path(blog) %>
+             <%= link_to '<i class="far fa-trash-alt"></i>'.html_safe, blog_path(blog), method: :delete, data: { confirm: 'Are you sure you want to delete that blog?'} %>
+          <% end %>
+        </p>
+      </div> <!-- text col -->
+
+    </div> <!-- row -->
+  </div> <!-- blog title box -->
+<% end %> <!-- link to blog -->

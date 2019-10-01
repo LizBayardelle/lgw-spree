@@ -821,6 +821,12 @@ GEM
       activesupport (>= 4.2)
     ffaker (2.10.0)
     ffi (1.10.0)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
+    font-awesome-sass (5.11.2)
+      sassc (>= 1.11)
+    font_awesome5_rails (0.9.0)
+      railties (>= 4.2)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
@@ -1057,6 +1063,8 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.9)
+    tinymce-rails (5.0.16)
+      railties (>= 3.1.1)
     twitter_cldr (4.4.3)
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.0)
@@ -1085,6 +1093,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 6.0)
   aws-sdk (~> 3)
   aws-sdk-s3
   better_errors
@@ -1093,6 +1102,9 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  font-awesome-rails
+  font-awesome-sass
+  font_awesome5_rails
   high_voltage (~> 3.1)
   jbuilder (~> 2.5)
   jquery-matchheight-rails
@@ -1111,6 +1123,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tel_to_helper
+  tinymce-rails
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)

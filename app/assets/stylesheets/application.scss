@@ -14,13 +14,16 @@
  *= require_self
  */
 
+ @import 'font-awesome';
+ @import 'font_awesome5_webfont';
+ @import 'font_awesome5.css';
 
 /* THIS ONE DOESN'T GET SEEN BY SPREE */
 
  $color-green: #23c5b3;
  $color-blue: #1f6ce4;
  $color-grey: #787878;
- $transparent-white: rgba(255, 255, 255, 0.95);
+ $transparent-white: rgba(255, 255, 255, 0.8);
  $transparent-grey: rgba(200, 200, 200, 0.95);
  $transparent-green: rgba(35, 197, 179, 0.5);
  $transparent-blue: rgba(31, 108, 228, 0.5);
@@ -37,6 +40,7 @@
  .color-blue { color: $color-blue }
  .color-grey { color: $color-grey }
  .color-white { color: white }
+ .color-black { color: black }
 
 
 
@@ -68,6 +72,13 @@ label { text-transform: capitalize; }
     margin-right: auto;
     margin-left: auto;
   }
+
+
+
+
+
+
+
 
 //------------------------//
 //------------------------//
@@ -150,6 +161,85 @@ a {
     border-color: $color-green !important;
 }
 
+.btn-primary:hover {
+  background-color: $color-blue !important;
+  border-color: $color-blue !important;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    display: inline !important;
+}
+
+
+
+
+
+
+
+
+
+//------------------------//
+//------------------------//
+//-------- BLOGS ---------//
+//------------------------//
+//------------------------//
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  vertical-align: top;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.thumbnail {
+  height: 40px;
+  display: inline-block;
+}
+
+.blog-title-box {
+  box-shadow: 0 10px 20px rgba(183, 173, 153, 0.19), 0 6px 6px rgba(183, 173, 153, 0.23);
+}
+
+.blog-title-box:hover {
+  box-shadow: 0 14px 28px rgba(183, 173, 153, 0.30), 0 10px 10px rgba(183, 173, 153, 0.22);
+}
+
+.blog-title-box .image {
+  height: 300px;
+}
+
+#big-feature a:hover,
+#most-popular a:hover,
+#featured a:hover {
+  text-decoration: none !important;
+}
+
+.blog-title-box .text p {
+  color: black;
+}
+
+.blog-title-box .text p.author {
+  color: $color-grey;
+  font-style: oblique;
+}
+
+.background-image {
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  max-width: 100%;
+}
+
 
 
 
@@ -189,6 +279,25 @@ a {
 
 
 
+
+
+
+
+
+//------------------------//
+//------------------------//
+//-------- NAVBAR --------//
+//------------------------//
+//------------------------//
+
+.sm-row {
+  background-color: $color-grey;
+}
+
+.sm-row img.pin {
+  max-width: 100%;
+  max-height: 250px;
+}
 
 
 
@@ -247,6 +356,11 @@ a {
 //------------------------//
 //------------------------//
 
+
+footer .sm-icons .svg-inline--fa {
+  font-size: 25px;
+  margin-right: 4px;
+}
 
 footer .logo-footer {
   margin-bottom: 10px;

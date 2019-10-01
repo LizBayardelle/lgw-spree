@@ -1,0 +1,51 @@
+<main>
+  <div class="container">
+    <table>
+      <tr>
+        <th>Images</th>
+        <th>Info</th>
+        <th>Published</th>
+        <th>Author</th>
+        <th>Main</th>
+        <th>Featured</th>
+        <th>Popular</th>
+      </tr>
+
+      <% @blogs.each do |blog| %>
+        <tr>
+          <td>
+            <% if blog.featured_image_url %><img src="<%= blog.featured_image_url %>" class="thumbnail" ><% end %>
+            <% if blog.pin_1_url || blog.pin_2_url || blog.pin_3_url || blog.pin_4_url %>Has Pins<% else %>No Pins<% end %><br>
+            <%= link_to edit_blog_path(blog) do %><i class="fas fa-edit"></i><% end %>
+            <%= link_to blog_path(blog), method: :delete, data: { confirm: "Are you sure you want to delete that blog?"} do %><i class="fas fa-trash-alt"></i><% end %>
+          </td>
+          <td>
+            <span style="font-weight: bold"><%= blog.title %></span><br>
+            <em><%= blog.tag_list %></em>
+          </td>
+          <td>
+            <% if blog.published %><span style="font-weight: bold">PUBLISHED</span><% end %><br>
+            <%= blog.published_at.in_time_zone("America/Los_Angeles").strftime("%m/%d/%Y") %>
+          </td>
+          <td><%= Spree::User.find(blog.spree_user_id).email %></td>
+          <td class="text-center">
+            <% if blog.big_feature %>
+              <i class="fas fa-check"></i>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <% if blog.featured %>
+              <i class="fas fa-check"></i>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <% if blog.most_popular %>
+              <i class="fas fa-check"></i>
+            <% end %>
+          </td>
+        </tr>
+
+      <% end %>
+    </table>
+  </div> <!-- container -->
+</main>

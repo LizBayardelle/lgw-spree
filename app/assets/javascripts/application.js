@@ -16,7 +16,8 @@
 //= require jquery-ui
 //= require activestorage
 //= require jquery.matchHeight
-//= require_tree .
+//= require font_awesome5
+//= require tinymce
 
 
 
