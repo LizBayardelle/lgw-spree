@@ -10,6 +10,7 @@ class BlogsController < ApplicationController
     @big_feature = Blog.where(big_feature: true, published: true).limit(1)
     @featured = Blog.where(featured: true, published: true).limit(3)
     @most_popular = Blog.where(most_popular: true, published: true).limit(3)
+    @recent = Blog.where(published: true, big_feature: false, most_popular: false, featured: false).order("published_at DESC")
     respond_to do |format|
       format.html
       format.rss { render :layout => false }
