@@ -11,6 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'figaro'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
@@ -21,7 +22,7 @@ gem 'font-awesome-rails'
 gem 'font-awesome-sass'
 gem 'font_awesome5_rails'
 gem 'tinymce-rails'
-gem 'acts-as-taggable-on', '~> 6.0' 
+gem 'acts-as-taggable-on', '~> 6.0'
 
 gem 'mini_magick'
 gem 'aws-sdk' , '~> 3'

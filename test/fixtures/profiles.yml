@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spree_user: one
+  first_name: MyString
+  last_name: MyString
+  can_blog: false
+
+two:
+  spree_user: two
+  first_name: MyString
+  last_name: MyString
+  can_blog: false

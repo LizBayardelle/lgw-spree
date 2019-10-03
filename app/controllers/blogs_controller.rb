@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :admin_only, except: [:index, :show]
 
   # GET /blogs
   # GET /blogs.json
@@ -84,6 +85,14 @@ class BlogsController < ApplicationController
       @blogs = Blog.all
     end
   end
+
+  def admin_only
+    unless current_spree_user && current_spree_user.admin?
+      redirect_back(fallback_location: root_path)
+      flash[:warning] = "Sorry, you must be an administrator to access that page."
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

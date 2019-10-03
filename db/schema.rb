@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_25_191424) do
+ActiveRecord::Schema.define(version: 2019_10_03_043124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -82,6 +82,16 @@ ActiveRecord::Schema.define(version: 2019_09_25_191424) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.bigint "spree_user_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.boolean "can_blog", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spree_user_id"], name: "index_profiles_on_spree_user_id"
   end
 
   create_table "spree_addresses", id: :serial, force: :cascade do |t|
@@ -1185,6 +1195,7 @@ ActiveRecord::Schema.define(version: 2019_09_25_191424) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blogs", "spree_users"
+  add_foreign_key "profiles", "spree_users"
   add_foreign_key "spree_oauth_access_grants", "spree_oauth_applications", column: "application_id"
   add_foreign_key "spree_oauth_access_tokens", "spree_oauth_applications", column: "application_id"
 end

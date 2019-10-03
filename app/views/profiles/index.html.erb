@@ -1,0 +1,46 @@
+<div class="container">
+
+  <h1 class="text-center">Users</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Contributor</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @spree_users.each do |user| %>
+        <% profile = Profile.where(spree_user_id: user.id).first %>
+        <tr>
+          <% if Profile.where(spree_user_id: user.id) == [] %>
+            <td><%= mail_to user.email %></td>
+            <td colspan="8"><%= link_to "Create User Profile", new_profile_path(spree_user_id: user.id) %></td>
+          <% else %>
+            <td>
+              <% if profile.avatar.attached? %>
+                  <%= image_tag profile.avatar, class: "thumbnail" %>
+              <% end %>
+            </td>
+            <td><%= mail_to user.email %></td>
+            <td><%= profile.first_name %></td>
+            <td><%= profile.last_name %></td>
+            <td class="text-center"><% if profile.can_blog %><i class="fas fa-check"></i><% end %></td>
+            <td class="text-center">
+              <%= link_to '<i class="fas fa-edit"></i>'.html_safe, edit_profile_path(profile, spree_user_id: user.id) %>
+              <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+</div>

@@ -9,7 +9,7 @@
             <%= link_to tag, tagged_path(tag: tag) %>
           <% end %>
           <br>
-          <em>By <%= Spree::User.find(@blog.spree_user_id).email %> on <%= @blog.published_at.in_time_zone("America/Los_Angeles").strftime("%B %d, %Y") %></em>
+          <em>By <%= Profile.where(spree_user_id: @blog.spree_user_id).last.full_name %> on <%= @blog.published_at.in_time_zone("America/Los_Angeles").strftime("%B %d, %Y") %></em>
         </p>
       </div>
     </div>
