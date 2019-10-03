@@ -4,6 +4,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
+    if params[:tag]
+      @tagged_blogs = Blog.tagged_with(params[:tag])
+    else
+      @tagged_blogs = []
+    end
     @blogs = Blog.where(published: true, big_feature: false, featured: false, most_popular: false).order("published_at DESC")
     @published_blogs = Blog.where(published: true).order("published_at DESC")
     @drafts = Blog.where(published: false)

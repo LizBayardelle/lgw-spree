@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :teaser %>
-    <%= f.input :tag_list %>
+    <%= f.input :tag_list, input_html: { value: @blog.tag_list.join(", ") } %>
     <%= f.text_area :body, class: "tinymce", rows: 20, cols: 120 %>
     <%= tinymce_assets %>
     <%= tinymce plugins: ["wordcount", "code", "anchor", "casechange", "codesample", "hr", "link", "preview"] %>

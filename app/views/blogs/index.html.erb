@@ -34,42 +34,60 @@
 
 <main class="container">
 
-  <div class="row">
+  <div class="row justify-content-center">
 
-    <% if @big_feature.count != 0 %>
-      <div class="col-12 pt-3" id="big-feature">
-        <% @big_feature.each do |blog| %>
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-center pt-4" id="tag_cloud">
+      <% tag_cloud Blog.tag_counts, %w{s m l} do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+      <% end %>
+    </div>
+
+    <% if @tagged_blogs.count != 0 %>
+
+      <div class="col-12 pt-3" id="tagged">
+        <% @tagged_blogs.each do |blog| %>
           <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
         <% end %> <!-- each do -->
       </div> <!-- col -->
-    <% end %>
 
-    <% if @most_popular.count != 0 %>
-      <div class="col-sm-6 pt-3" id="most-popular">
-        <h2>Most Popular</h2>
-        <% @most_popular.each do |blog| %>
-          <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
-        <% end %> <!-- each blog do -->
-      </div> <!-- col -->
-    <% end %>
+    <% else %>
 
-    <% if @featured.count != 0 %>
-      <div class="col-sm-6 pt-3" id="featured">
-        <h2>Featured</h2>
-        <% @featured.each do |blog| %>
-          <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
-        <% end %> <!-- each blog do -->
-      </div> <!-- col -->
-    <% end %>
+      <% if @big_feature.count != 0 %>
+        <div class="col-12 pt-3" id="big-feature">
+          <% @big_feature.each do |blog| %>
+            <%= render partial: "blogs/blog-card-big", locals: { blog: blog } %>
+          <% end %> <!-- each do -->
+        </div> <!-- col -->
+      <% end %>
 
-    <% if @recent.count != 0 %>
-      <div class="col-12 pt-3" id="recent">
-        <h2>Most Recent Posts</h2>
-        <% @recent.each do |blog| %>
-          <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
-        <% end %> <!-- each do -->
-      </div> <!-- col -->
-    <% end %>
+      <% if @most_popular.count != 0 %>
+        <div class="col-sm-6 pt-3" id="most-popular">
+          <h2>Most Popular</h2>
+          <% @most_popular.each do |blog| %>
+            <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
+          <% end %> <!-- each blog do -->
+        </div> <!-- col -->
+      <% end %>
+
+      <% if @featured.count != 0 %>
+        <div class="col-sm-6 pt-3" id="featured">
+          <h2>Featured</h2>
+          <% @featured.each do |blog| %>
+            <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
+          <% end %> <!-- each blog do -->
+        </div> <!-- col -->
+      <% end %>
+
+      <% if @recent.count != 0 %>
+        <div class="col-12 pt-3" id="recent">
+          <h2>Most Recent Posts</h2>
+          <% @recent.each do |blog| %>
+            <%= render partial: "blogs/blog-card", locals: { blog: blog } %>
+          <% end %> <!-- each do -->
+        </div> <!-- col -->
+      <% end %>
+
+    <% end %> <!-- tagged if else -->
 
   </div> <!-- row -->
 

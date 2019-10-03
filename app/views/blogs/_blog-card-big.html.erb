@@ -11,8 +11,14 @@
           <%= blog.title %>
         </h3>
 
+        <p><%= blog.teaser %></p>
+
         <p class="tags">
           <%= raw( blog.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') ) %>
+        </p>
+
+        <p>
+          <em>By <%= Spree::User.find(blog.spree_user_id).email %> on <%= blog.published_at.in_time_zone("America/Los_Angeles").strftime("%B %d, %Y") %></em>
         </p>
 
         <% if current_spree_user && current_spree_user.admin? %>

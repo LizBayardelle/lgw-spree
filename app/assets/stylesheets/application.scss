@@ -214,6 +214,10 @@ tr:nth-child(even) {
   box-shadow: 0 14px 28px rgba(183, 173, 153, 0.30), 0 10px 10px rgba(183, 173, 153, 0.22);
 }
 
+.blog-title-box a:hover {
+  text-decoration: none;
+}
+
 #big-feature .blog-title-box .image {
   height: 200px;
 }
@@ -579,3 +583,12 @@ footer .logo-part {
  .px-3 { padding-left: 1rem; padding-right: 1rem }
  .px-4 { padding-left: 1.5rem; padding-right: 1.5rem }
  .px-5 { padding-left: 3rem; padding-right: 3rem }
+
+
+ #tag_cloud {
+  width: 400px;
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.8em; }
+}
