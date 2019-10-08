@@ -4,7 +4,7 @@
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-lg-12">
-        <h1 class="display-4 mt-5 mb-2">Laguna Greenworks</h1>
+        <h1 class="display-4 mt-5 mb-2">Laguna <div style="display: inline-block; white-space: nowrap">Greenw<%= image_tag "dropring.png", style: "display: inline-block; height: 2rem" %>rks</div></h1>
         <p class="lead mb-5">Authorized Distributor of Dyson Professional Products</p>
       </div>
     </div>
@@ -46,7 +46,7 @@
   <div class="row">
     <div class="col-sm-6 col-lg-3 mb-5">
       <div class="card h-100">
-        <%= image_tag "hand-dryers.jpg", class: "card-img-top" %>
+        <%= image_tag "hand-dryers-2.jpg", class: "card-img-top" %>
         <div class="card-body h-50">
           <h4 class="card-title">Hand Dryers</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
@@ -59,20 +59,7 @@
 
     <div class="col-sm-6 col-lg-3 mb-5">
       <div class="card h-100">
-        <%= image_tag "lighting.jpg", class: "card-img-top" %>
-        <div class="card-body h-50">
-          <h4 class="card-title">Lighting</h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
-        </div>
-        <div class="card-bottom text-center">
-          <%= link_to "See More", main_app.page_path('lighting'), class: "btn-bubble" %>
-        </div> <!-- card bottom -->
-      </div> <!-- card -->
-    </div> <!-- col -->
-
-    <div class="col-sm-6 col-lg-3 mb-5">
-      <div class="card h-100">
-        <%= image_tag "air-quality.jpg", class: "card-img-top" %>
+        <%= image_tag "air-quality-2.jpg", class: "card-img-top" %>
         <div class="card-body h-50">
           <h4 class="card-title">Air Quality</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
@@ -85,13 +72,26 @@
 
     <div class="col-sm-6 col-lg-3 mb-5">
       <div class="card h-100">
-        <%= image_tag "floor-care.jpg", class: "card-img-top" %>
+        <%= image_tag "floor-care-2.jpg", class: "card-img-top" %>
         <div class="card-body h-50">
           <h4 class="card-title">Floor Care</h4>
           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
         </div>
         <div class="card-bottom text-center">
           <%= link_to "See More", main_app.page_path('floor-care'), class: "btn-bubble" %>
+        </div> <!-- card bottom -->
+      </div> <!-- card -->
+    </div> <!-- col -->
+
+    <div class="col-sm-6 col-lg-3 mb-5">
+      <div class="card h-100">
+        <%= image_tag "lighting-2.jpg", class: "card-img-top" %>
+        <div class="card-body h-50">
+          <h4 class="card-title">Lighting</h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
+        </div>
+        <div class="card-bottom text-center">
+          <%= link_to "See More", main_app.page_path('lighting'), class: "btn-bubble" %>
         </div> <!-- card bottom -->
       </div> <!-- card -->
     </div> <!-- col -->

@@ -22,6 +22,7 @@
 
  $color-green: #23c5b3;
  $color-blue: #1f6ce4;
+ $color-dark-grey: #3C3C3C;
  $color-grey: #787878;
  $transparent-white: rgba(255, 255, 255, 0.8);
  $transparent-grey: rgba(200, 200, 200, 0.95);
@@ -93,10 +94,14 @@ a.navbar-brand img {
 }
 
 .nav-link, .menu label {
-  color: $color-grey !important;
+  color: $color-dark-grey !important;
   font-weight: 300;
   transition: text-shadow .3s;
   margin-bottom: 0 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  font-size: 16px;
 }
 
 .nav-link:hover , .menu label:hover {
