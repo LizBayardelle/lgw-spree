@@ -1,13 +1,21 @@
 
 
 <!-- Jumbotron Header -->
-<header class="jumbotron my-4">
+<header class="jumbotron my-4 d-flex align-items-center laguna-beach-background" style="min-height: 600px">
   <div class="container">
     <h1 class="display-3">About Laguna Greenworks</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+    <p class="lead" style="line-height: 1.2">
+      CEO Mallory McCamant founded Laguna Greenworks in 2009 in Laguna Beach, California. As the business grew, a regional office was opened in San Mateo, California in 2019.
+    </p>
+    <p class="lead" style="line-height: 1.2">
+      Laguna Greenworks is a certified California Small Business and a certified Woman-Owned Small Business.
+    </p>
     <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
   </div>
 </header>
+
+
+
 
 <div class="container">
 
@@ -15,35 +23,50 @@
   <!-- Page Features -->
   <div class="row text-center">
 
-    <div class="col-md-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4">
       <div class="card h-100">
-        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <img class="card-img-top" src="http://placehold.it/500x325" alt="Mallory McCamant Headshot">
         <div class="card-body">
           <h4 class="card-title mb-1">Mallory<br class="d-lg-none"> McCamant</h4>
-          <h5 class="color-grey">Principal</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+          <h5 class="color-green font-weight-bold">CEO</h5>
+          <p class="card-text">
+            Mallory has over 30 years of experience in the business sector serving as CFO and COO for engineering companies and private equity firms.  She has a wide breadth of knowledge, including IPO, M&A, credit and banking relationships, business development, branding, and identity.
+          </p>
+          <p class="card-text">
+            Mallory has an MBA from The Paul Merage School of Business at the University of California, Irvine.  She also received her BA from UC Irvine, where she played #1 for the Division 1 UCI Women’s Tennis Team.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="col-md-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4">
       <div class="card h-100">
-        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <img class="card-img-top" src="http://placehold.it/500x325" alt="Ellen Mallory Headshot">
         <div class="card-body">
           <h4 class="card-title mb-1">Ellen<br class="d-lg-none"> Mallory</h4>
-          <h5 class="color-grey">Regional Manager</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          <h5 class="color-green font-weight-bold">Regional Manager</h5>
+          <p class="card-text">
+            Ellen has over 35 years of experience in the public and private sectors.  After working for 15 years in the aerospace industry, both as contract administrator for a private company and a consultant to the industry, Ellen moved her energies to the public sector.  She was elected to the local school board and was appointed to three city commissions and a county civil grand jury.
+          </p>
+          <p class="card-text">
+            Ellen has an MBA from The Paul Merage School of Business at the University of California, Irvine, and a BA in Political Science from Principia College.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="col-md-4 mb-4">
+    <div class="col-md-6 col-lg-4 mb-4">
       <div class="card h-100">
-        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+        <img class="card-img-top" src="https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/Headshot+(Liz+Bayardelle).jpg" alt="Liz Bayardelle Headshot">
         <div class="card-body">
           <h4 class="card-title mb-1">Liz<br class="d-lg-none"> Bayardelle</h4>
-          <h5 class="color-grey">Digital Polymath</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+          <h5 class="color-green font-weight-bold">Digital Polymath</h5>
+          <p class="card-text">
+            Liz serves as Laguna Greenworks' resident digital nerd and research geek, with experience in analytics, front- and back-end web development in multiple programming languages, digital and content marketing strategies, and psychological consulting and research.
+          </p>
+          <p class="card-text">
+            Liz is a graduand at The Chicago School of Professional Psychology for a PhD in Business Psychology, holds a MA from John Jay College in New York, and a BA in Psychology from Pomona College.
+          </p>
         </div>
       </div>
     </div>
@@ -55,7 +78,7 @@
 
   </div> <!-- container -->
 
-  <div id="contact" class="jumbotron">
+  <div id="contact" class="jumbotron laguna-beach-background">
     <div class="container">
       <h1 class="text-center">Contact Us</h1>
       <%= render 'form', contact: @contact %>

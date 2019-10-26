@@ -153,6 +153,58 @@ ul.submenu li a:hover{
 
 //------------------------//
 //------------------------//
+//-------- IMAGES --------//
+//------------------------//
+//------------------------//
+//------------------------//
+
+.homepage-background {
+  min-height: 600px;
+  background: linear-gradient(
+    rgba(255,255,255,0.3),
+    rgba(255,255,255,0.3)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/dyson-for-business.jpg") no-repeat center right fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.laguna-beach-background {
+  min-height: 600px;
+  background: linear-gradient(
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.5)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/laguna-beach.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.blog-background {
+  min-height: 500px;
+  background: linear-gradient(
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.4)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/drops-of-water.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+
+
+
+//------------------------//
+//------------------------//
 //--------- SPREE --------//
 //------- OVERRIDES ------//
 //------------------------//
@@ -320,6 +372,8 @@ tr:nth-child(even) {
 
 
 
+
+
 //------------------------//
 //------------------------//
 //-------- BUTTONS -------//
@@ -359,6 +413,12 @@ tr:nth-child(even) {
 .card .card-bottom {
   padding-bottom: 15px;
 }
+
+.card-title {
+  font-weight: 100;
+  font-size: 1.7em;
+}
+
 
 
 
