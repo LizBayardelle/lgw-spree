@@ -14,12 +14,12 @@
   <div class="row">
     <div class="field col-md-6">
       <%= form.label :first_name %>
-      <%= form.text_field :first_name, class: "form-control" %>
+      <%= form.text_field :first_name, class: "form-control", required: true %>
     </div>
 
     <div class="field col-md-6">
       <%= form.label :last_name %>
-      <%= form.text_field :last_name, class: "form-control" %>
+      <%= form.text_field :last_name, class: "form-control", required: true %>
     </div>
 
     <div class="field col-md-6">
@@ -44,11 +44,11 @@
 
     <div class="field col-12">
       <%= form.label :message %>
-      <%= form.text_area :message, class: "form-control" %>
+      <%= form.text_area :message, class: "form-control", required: true %>
     </div>
 
     <div class="text-center col-12">
-      <%= form.submit "Send Message", class: "form-submit btn-bubble" %>
+      <%= form.submit "Send Message", class: "form-submit btn-bubble", required: true %>
     </div>
   </div> <!-- row -->
 

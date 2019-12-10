@@ -1,43 +1,26 @@
-<p id="notice"><%= notice %></p>
+<main class="container py-5">
 
-<h1>Contacts</h1>
+  <header class="text-center">
+    <h1>Contact Us Submissions</h1>
+  </header>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Preferred contact</th>
-      <th>Subject</th>
-      <th>Message</th>
-      <th>Responded</th>
-      <th>Archived</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @contacts.each do |contact| %>
-      <tr>
-        <td><%= contact.first_name %></td>
-        <td><%= contact.last_name %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td><%= contact.preferred_contact %></td>
-        <td><%= contact.subject %></td>
-        <td><%= contact.message %></td>
-        <td><%= contact.responded %></td>
-        <td><%= contact.archived %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+  <% @contacts.each do |contact| %>
+    <section class="my-3">
+      <h3><%= link_to contact.subject, contact %> <%= link_to '<i class="fas fa-trash"></i>'.html_safe, contact, method: :delete, data: { confirm: 'Are you sure?' } %></h3>
+      <p>
+        <strong>
+          <%= contact.first_name %> <%= contact.last_name %>
+          ( <%= mail_to contact.email %><% if contact.preferred_contact == "Email" %> <i class="fas fa-star"></i><% end %>
+          &nbsp;|&nbsp;
+          <%= contact.phone %><% if contact.preferred_contact == "Phone" %> <i class="fas fa-star"></i><% end %> )
+        </strong>
+        <br>
+        <% if contact.responded %>Responded<% else %>Not Responded<% end %>
+      </p>
+    </section>
+  <% end %>
 
-<%= link_to 'New Contact', new_contact_path %>
+
+</main>

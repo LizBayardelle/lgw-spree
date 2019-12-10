@@ -1,49 +1,50 @@
-<p id="notice"><%= notice %></p>
+<main>
 
-<p>
-  <strong>First name:</strong>
-  <%= @contact.first_name %>
-</p>
+  <section class="text-right mb-3 mr-5">
+    <%= link_to 'Back to Submissions Page', contacts_path %>
+  </section>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @contact.last_name %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
+  <header class="text-center mb-5">
+    <h1><%= @contact.subject %></h1>
+    <% if @contact.archived %><h3>ARCHIVED</h3><% end %>
+  </header>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
 
-<p>
-  <strong>Preferred contact:</strong>
-  <%= @contact.preferred_contact %>
-</p>
+  <section class="container mb-5">
+    <p>
+      <strong>From:</strong> <%= @contact.first_name %> <%= @contact.last_name %>
+    </p>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @contact.subject %>
-</p>
+    <p>
+      <strong>Email:</strong> <%= mail_to @contact.email %><% if @contact.preferred_contact == "Email" %> (Preferred)<% end %>
+    </p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @contact.message %>
-</p>
+    <p>
+      <strong>Phone:</strong> <%= @contact.phone %><% if @contact.preferred_contact == "Phone" %> (Preferred)<% end %>
+    </p>
 
-<p>
-  <strong>Responded:</strong>
-  <%= @contact.responded %>
-</p>
+    <p>
+      <strong>Message:</strong> <%= @contact.message %>
+    </p>
 
-<p>
-  <strong>Archived:</strong>
-  <%= @contact.archived %>
-</p>
+    <p>
+      <strong>Responded:</strong> <% if @contact.responded %>Yes<% else %>No<% end %>
+    </p>
+  </section>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+
+  <section class="text-center">
+    <% if @contact.responded %>
+      <%= link_to "Mark Not Responded", mark_unresponded_path, class: "btn btn-primary mx-3", method: :post %>
+    <% else %>
+      <%= link_to "Mark Responded", mark_responded_path, class: "btn btn-primary mx-3", method: :post %>
+    <% end %>
+    <% if @contact.archived %>
+      <%= link_to "Mark Not Archived", mark_unarchived_path, class: "btn btn-primary mx-3", method: :post %>
+    <% else %>
+      <%= link_to "Mark Archived", mark_archived_path, class: "btn btn-primary mx-3", method: :post %>
+    <% end %>
+  </section>
+
+</main>

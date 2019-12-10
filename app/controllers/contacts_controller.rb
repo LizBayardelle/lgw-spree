@@ -1,34 +1,35 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_contact, only: [:show, :edit, :destroy]
 
-  # GET /contacts
-  # GET /contacts.json
+
+
   def index
     @contacts = Contact.all
   end
 
-  # GET /contacts/1
-  # GET /contacts/1.json
+
   def show
   end
 
-  # GET /contacts/new
+
+
   def new
     @contact = Contact.new
   end
 
-  # GET /contacts/1/edit
+
+
   def edit
   end
 
-  # POST /contacts
-  # POST /contacts.json
+
+
   def create
     @contact = Contact.new(contact_params)
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        format.html { redirect_to root_path, notice: "Your message has been sent.  We'll get back to you shortly." }
         format.json { render :show, status: :created, location: @contact }
       else
         format.html { render :new }
@@ -37,22 +38,8 @@ class ContactsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /contacts/1
-  # PATCH/PUT /contacts/1.json
-  def update
-    respond_to do |format|
-      if @contact.update(contact_params)
-        format.html { redirect_to @contact, notice: 'Contact was successfully updated.' }
-        format.json { render :show, status: :ok, location: @contact }
-      else
-        format.html { render :edit }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
-  # DELETE /contacts/1
-  # DELETE /contacts/1.json
+
   def destroy
     @contact.destroy
     respond_to do |format|
@@ -61,13 +48,42 @@ class ContactsController < ApplicationController
     end
   end
 
+
+  def mark_responded
+    @contact = Contact.find(params[:id])
+    if @contact.update_attributes(responded: true)
+      redirect_to contacts_path, notice: "That message has been marked responded."
+    end
+  end
+
+  def mark_unresponded
+    @contact = Contact.find(params[:id])
+    if @contact.update_attributes(responded: false)
+      redirect_to contacts_path, notice: "That message has been marked unresponded."
+    end
+  end
+
+  def mark_archived
+    @contact = Contact.find(params[:id])
+    if @contact.update_attributes(archived: true)
+      redirect_to contacts_path, notice: "That message has been marked archived."
+    end
+  end
+
+  def mark_unarchived
+    @contact = Contact.find(params[:id])
+    if @contact.update_attributes(archived: false)
+      redirect_to contacts_path, notice: "That message has been marked unarchived."
+    end
+  end
+
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_contact
       @contact = Contact.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+
     def contact_params
       params.require(:contact).permit(:first_name, :last_name, :email, :phone, :preferred_contact, :subject, :message, :responded, :archived)
     end
