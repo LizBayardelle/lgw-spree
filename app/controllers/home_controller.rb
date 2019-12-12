@@ -1,11 +1,14 @@
 class HomeController < ApplicationController
-  before_action :admin_only, only: [:blogs]
+  before_action :admin_only, only: [:blogs, :admin]
 
   def index
   end
 
   def blogs
     @blogs = Blog.all
+  end
+
+  def admin
   end
 
   def admin_only

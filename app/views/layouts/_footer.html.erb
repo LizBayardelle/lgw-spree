@@ -27,6 +27,7 @@
               <li> <%= link_to "Warranty Information", main_app.page_path("warranty-information") %> </li>
               <% if current_spree_user && current_spree_user.admin? %>
                 <li> <%= link_to "Spree Backend", spree.admin_path %> </li>
+                <li> <%= link_to "Admin Portal", main_app.home_admin_path %> </li>
               <% else %>
                 <li> <%= link_to "Admin Login", spree.admin_path %> </li>
               <% end %>
