@@ -79,7 +79,43 @@ label { text-transform: capitalize; }
   height: 10px;
 }
 
+.linkish {
+  cursor: pointer;
+}
 
+.blue-title .card-title {
+  color: $color-green;
+}
+
+// ul.no-bullet {
+//   list-style-type: none;
+//   padding: 0;
+//   margin: 0;
+// }
+
+.droplet {
+    list-style: none;
+    padding-left: 0;
+}
+.droplet li {
+    position: relative;
+    padding-left: 25px;
+    padding-bottom: 7px;
+}
+.droplet li:before {
+    content: '';
+    padding-left: 20px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-image: url('https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/Blue+Drop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 
 
@@ -159,6 +195,25 @@ ul.submenu li a:hover{
 //------------------------//
 //------------------------//
 
+.square-image-wrapper {
+  width: 100%;
+  padding-bottom: 100%;
+  margin: 1em auto;
+  overflow: hidden;
+  position: relative;
+  background: #000
+}
+
+.square-image-wrapper img {
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .overlay {
   width: 70%;
   margin-left: 15%;
@@ -169,6 +224,11 @@ ul.submenu li a:hover{
   margin-top: 100px;
   left:0;
   text-align: left;
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
 }
 
 .overlay .transparent-white {
@@ -190,9 +250,6 @@ ul.submenu li a:hover{
 }
 
 @media only screen and (min-width: 1200px) {
-  .overlay .transparent-white {
-    background-color: transparent;
-  }
   .carousel-inner{
     max-height: 700px !important;
   }
