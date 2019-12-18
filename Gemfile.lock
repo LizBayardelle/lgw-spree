@@ -1108,6 +1108,7 @@ DEPENDENCIES
   font-awesome-rails
   font-awesome-sass
   font_awesome5_rails
+  friendly_id (~> 5.2.4)
   high_voltage (~> 3.1)
   jbuilder (~> 2.5)
   jquery-matchheight-rails

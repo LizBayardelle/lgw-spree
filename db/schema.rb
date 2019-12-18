@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_03_043124) do
+ActiveRecord::Schema.define(version: 2019_12_17_222824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 2019_10_03_043124) do
     t.boolean "big_feature", default: false
     t.boolean "featured", default: false
     t.boolean "most_popular", default: false
+    t.string "slug"
+    t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["spree_user_id"], name: "index_blogs_on_spree_user_id"
   end
 
