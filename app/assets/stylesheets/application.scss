@@ -397,21 +397,12 @@ tr:nth-child(even) {
   display: inline-block;
 }
 
-.blog-title-box {
-  box-shadow: 0 10px 20px rgba(183, 173, 153, 0.19), 0 6px 6px rgba(183, 173, 153, 0.23);
-}
+.blog-title-box { box-shadow: 0 10px 20px rgba(183, 173, 153, 0.19), 0 6px 6px rgba(183, 173, 153, 0.23); }
+.blog-title-box:hover { box-shadow: 0 14px 28px rgba(183, 173, 153, 0.30), 0 10px 10px rgba(183, 173, 153, 0.22); }
+.blog-title-box a:hover { text-decoration: none; }
+.blog-title-box h3 { text-transform: none; font-size: 1.75em !important; }
 
-.blog-title-box:hover {
-  box-shadow: 0 14px 28px rgba(183, 173, 153, 0.30), 0 10px 10px rgba(183, 173, 153, 0.22);
-}
-
-.blog-title-box a:hover {
-  text-decoration: none;
-}
-
-#big-feature .blog-title-box .image {
-  height: 200px;
-}
+#big-feature .blog-title-box .image { height: 200px; }
 
 #most-popular .blog-title-box .image,
 #featured .blog-title-box .image,
