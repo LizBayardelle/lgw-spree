@@ -64,14 +64,16 @@ p, li { font-family: verdana, arial, helvetica, sans-serif; font-size: .9rem; li
 .blog a { font-weight: 700; }
 
 
-.alert { margin: 0px }
-
 .text-page h1 { margin: 20px 0 20px 0 }
 .text-page h2 { font-weight: 400 !important; color: black; }
 .text-page h3 { color: $color-green; }
 
 .buffer { height: 50px; width: 100%; }
 .half-buffer { height: 25px; width: 100%; }
+
+.alert { margin: 0px }
+
+.space-between-bullets li { padding-bottom: 10px; }
 
 label { text-transform: capitalize; }
 .form-submit {
