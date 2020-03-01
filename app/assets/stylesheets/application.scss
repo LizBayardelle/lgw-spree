@@ -481,6 +481,31 @@ ul.submenu li a:hover{
 }
 
 
+.carpet-background {
+  min-height: 200px;
+  background: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/grey-carpet.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.hardwood-floor-background {
+  min-height: 200px;
+  background: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/hardwood-floor.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 
 
