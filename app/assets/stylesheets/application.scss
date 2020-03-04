@@ -484,8 +484,8 @@ ul.submenu li a:hover{
 .carpet-background {
   min-height: 200px;
   background: linear-gradient(
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.7)
   ),
   url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/grey-carpet.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -661,7 +661,7 @@ tr:nth-child(even) {
   background-color: $color-grey;
 }
 
-.sm-row img.pin {
+img.pin {
   max-width: 100%;
   max-height: 250px;
 }
