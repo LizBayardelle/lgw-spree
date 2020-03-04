@@ -20,17 +20,17 @@
           <div class="col-12 col-sm-6 col-md-4 px-4">
             <h6>Important Links</h6>
             <ul>
-              <li> <%= link_to "Home", main_app.root_path %> </li>
-              <li> <%= link_to "Testimonials", main_app.page_path("testimonials") %> </li>
-              <li> <%= link_to "About Us", main_app.new_contact_path %> </li>
-              <li> <%= link_to "Customer Service", main_app.page_path("customer-service") %> </li>
-              <li> <%= link_to "Policies and Notices", main_app.page_path("policies-and-noticies") %> </li>
-              <li> <%= link_to "Warranty Information", main_app.page_path("warranty-information") %> </li>
+              <li class="mb-0"> <%= link_to "Home", main_app.root_path %> </li>
+              <li class="mb-0"> <%= link_to "Testimonials", main_app.page_path("testimonials") %> </li>
+              <li class="mb-0"> <%= link_to "About Us", main_app.new_contact_path %> </li>
+              <li class="mb-0"> <%= link_to "Customer Service", main_app.page_path("customer-service") %> </li>
+              <li class="mb-0"> <%= link_to "Policies and Notices", main_app.page_path("policies-and-noticies") %> </li>
+              <li class="mb-0"> <%= link_to "Warranty Information", main_app.page_path("warranty-information") %> </li>
               <% if current_spree_user && current_spree_user.admin? %>
-                <li> <%= link_to "Spree Backend", spree.admin_path %> </li>
-                <li> <%= link_to "Admin Portal", main_app.home_admin_path %> </li>
+                <li class="mb-0"> <%= link_to "Spree Backend", spree.admin_path %> </li>
+                <li class="mb-0"> <%= link_to "Admin Portal", main_app.home_admin_path %> </li>
               <% else %>
-                <li> <%= link_to "Admin Login", spree.admin_path %> </li>
+                <li class="mb-0"> <%= link_to "Admin Login", spree.admin_path %> </li>
               <% end %>
             </ul>
             <div><%= image_tag "WOSB.jpg", style: "max-width: 50%" %></div>
