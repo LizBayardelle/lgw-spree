@@ -25,6 +25,7 @@
  $color-dark-grey: #3C3C3C;
  $color-grey: #787878;
  $color-light-grey: #c0c0c0;
+ $color-white: #ffffff;
  $transparent-white: rgba(255, 255, 255, 0.85);
  $transparent-grey: rgba(200, 200, 200, 0.95);
  $transparent-green: rgba(35, 197, 179, 0.5);
@@ -253,17 +254,19 @@ ul.submenu{
   padding: 0;
   overflow: hidden;
   list-style-type: none;
-  background:  $transparent-white;
+  background:  $color-white;
   transition: max-height 0.5s ease-out;
   position: absolute;
-  min-width: 100%;
+  min-width: 200px;
   z-index:  100;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+
 }
 
 ul.submenu li a {
   display: block;
   padding: 12px;
-  color:  $transparent-white;
+  color:  $color-white;
   text-decoration: none;
   transition: background .3s;
   white-space: nowrap;
@@ -443,10 +446,10 @@ ul.submenu li a:hover{
 .breadcrumbs {
   min-height: 50px;
   background: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.4)
+    rgba(31, 58, 147, 0.5),
+    rgba(31, 58, 147, 0.5)
   ),
-  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/leaf.jpg") no-repeat center center fixed;
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/blue-water.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -460,6 +463,46 @@ ul.submenu li a:hover{
     rgba(0,0,0,0.5)
   ),
   url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/leaf.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.light-spots-background {
+  min-height: 200px;
+  background: linear-gradient(
+    rgba(255,255,224,0.4),
+    rgba(255,255,224,0.4)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/light-spots.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.light-burst-background {
+  min-height: 200px;
+  background: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/light-burst.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.dyson-lighting-background {
+  min-height: 200px;
+  background: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/dyson-lighting.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
