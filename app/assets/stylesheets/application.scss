@@ -443,17 +443,26 @@ ul.submenu li a:hover{
   background-size: cover;
 }
 
-.breadcrumbs {
+.page-breadcrumbs {
   min-height: 50px;
+  color: black !important;
   background: linear-gradient(
-    rgba(31, 58, 147, 0.5),
-    rgba(31, 58, 147, 0.5)
+    rgba(200, 200, 200, 0.7),
+    rgba(200, 200, 200, 0.7)
   ),
-  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/blue-water.jpg") no-repeat center center fixed;
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/rock.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.page-breadcrumbs a {
+  color: $color-blue !important;
+}
+
+.page-breadcrumbs p {
+  line-height: 50px;
 }
 
 .leaf-background {
@@ -483,6 +492,19 @@ ul.submenu li a:hover{
   background-size: cover;
 }
 
+.air-1-background {
+  min-height: 200px;
+  background: linear-gradient(
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.6)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/air-1.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .light-burst-background {
   min-height: 200px;
   background: linear-gradient(
@@ -490,6 +512,19 @@ ul.submenu li a:hover{
     rgba(0,0,0,0.5)
   ),
   url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/light-burst.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.metal-background {
+  min-height: 200px;
+  background: linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  ),
+  url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/metal.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -566,13 +601,18 @@ a {
 
 .btn-primary {
     color: #fff !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
     background-color: $color-green !important;
     border-color: $color-green !important;
+    text-shadow: 1px 1px #000000;
+    box-shadow: 0 10px 20px rgba(183, 173, 153, 0.19), 0 6px 6px rgba(183, 173, 153, 0.23) !important;
 }
 
 .btn-primary:hover {
   background-color: $color-blue !important;
   border-color: $color-blue !important;
+  box-shadow: 0 14px 28px rgba(183, 173, 153, 0.30), 0 10px 10px rgba(183, 173, 153, 0.22) !important;
 }
 
 form input[type="radio"],
