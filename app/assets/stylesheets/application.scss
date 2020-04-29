@@ -79,6 +79,11 @@ h2, .h2 { color: $color-grey; font-weight: 200 !important; }
 h3, .h3 { color: $color-grey; font-weight: 200 !important; text-transform: uppercase; font-size: 1.3em !important; }
 p, li { font-family: verdana, arial, helvetica, sans-serif; }
 
+@media screen and (max-width: 768px) {
+  .display-4 { font-size: 2rem !important; }
+  .overlay p { font-size: 1rem !important;}
+}
+
 #blog-post h2 { border-bottom: solid thin $color-green;}
 #blog-post p { font-size: 1.1rem; }
 
