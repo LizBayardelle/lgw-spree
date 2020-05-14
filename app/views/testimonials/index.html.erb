@@ -1,0 +1,22 @@
+<main class="container py-4">
+
+  <header class="text-center">
+    <h1>Testimonials & Customer Photos</h1>
+    <% if spree_current_user && spree_current_user.admin? %>
+      <%= link_to "Leave a Testimonial", new_testimonial_path, class: "btn-bubble" %>
+    <% end %>
+  </header>
+
+  <section>
+    <div class="row">
+
+      <% @testimonials.each do |testimonial| %>
+        <%= render partial: "testimonials/square", locals: { testimonial: testimonial } %>
+        <%= render partial: "testimonials/modal", locals: { testimonial: testimonial } %>
+        <%= render partial: "testimonials/script", locals: { testimonial: testimonial } %>
+      <% end %>
+
+    </div> <!-- row -->
+  </section> <!-- photo grid -->
+
+</main>

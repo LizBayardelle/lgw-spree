@@ -1,0 +1,9 @@
+<div class="col-12 col-sm-6 col-md-4">
+  <div id="img-<%= testimonial.id %>" class="square-image-wrapper linkish">
+    <% if testimonial.photo.attached? %>
+      <%= image_tag testimonial.photo %>
+    <% else %>
+      <img src="https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/Quote+Slide+(Green).jpg" />
+    <% end %>
+  </div> <!-- wrapper -->
+</div> <!-- col -->

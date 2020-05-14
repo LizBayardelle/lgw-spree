@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_17_222824) do
+ActiveRecord::Schema.define(version: 2020_05_13_170016) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1193,6 +1193,21 @@ ActiveRecord::Schema.define(version: 2019_12_17_222824) do
     t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
+  end
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.boolean "airblades", default: false
+    t.boolean "fans", default: false
+    t.boolean "vacuums", default: false
+    t.boolean "lighting", default: false
+    t.boolean "accessories", default: false
+    t.boolean "homepage", default: false
+    t.boolean "category_pages", default: false
+    t.boolean "testimonials", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

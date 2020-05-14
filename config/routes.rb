@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :testimonials
   get 'home/index'
   root 'home#index'
-  get 'home/blogs'
-  get 'home/admin'
+
+  get 'admin/testimonials'
+  get 'admin/blogs'
+  get 'admin/management'
 
   get '/tagged', to: "blogs#tagged", as: :tagged
   get 'tags/:tag', to: 'blogs#index', as: :tag

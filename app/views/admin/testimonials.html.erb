@@ -1,0 +1,58 @@
+<main class="my-4">
+
+  <header class="text-center mb-4">
+    <h1>Testimonial Manager</h1>
+    <%= link_to "Create New Testimonial", new_testimonial_path, class: "btn-bubble" %>
+  </header>
+
+  <div class="container">
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Title</th>
+        <th class="text-center">Home<br>Page</th>
+        <th class="text-center">Product<br>Pages</th>
+        <th class="text-center">Testimonials<br>Page</th>
+      </tr>
+
+      <% @testimonials.each do |testimonial| %>
+        <tr>
+          <td class="text-center">
+            <% if testimonial.photo %>
+              <img src="<%= url_for testimonial.photo %>" class="thumbnail" id="img-<%= testimonial.id %>" style="cursor: pointer"><br>
+            <% else %>
+              <img src="https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/Quote+Slide+(Green).jpg" class="thumbnail" id="img-<%= testimonial.id %>" style="cursor: pointer"><br>
+            <% end %>
+            <%= render partial: "testimonials/modal", locals: { testimonial: testimonial } %>
+            <%= render partial: "testimonials/script", locals: { testimonial: testimonial } %>
+          </td>
+          <td>
+            <%= testimonial.title %>
+          </td>
+          <td class="text-center">
+            <% if testimonial.homepage %>
+              <i class="fas fa-check"></i>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <% if testimonial.category_pages %>
+              <% products = [] %>
+              <% products << "Airblades" if testimonial.airblades %>
+              <% products << "Fans" if testimonial.fans %>
+              <% products << "Vacuums" if testimonial.vacuums %>
+              <% products << "Lighting" if testimonial.lighting %>
+              <% products << "Accessories" if testimonial.accessories %>
+              <%= products.join(", ") %>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <% if testimonial.testimonials %>
+              <i class="fas fa-check"></i>
+            <% end %>
+          </td>
+        </tr>
+
+      <% end %>
+    </table>
+  </div> <!-- container -->
+</main>

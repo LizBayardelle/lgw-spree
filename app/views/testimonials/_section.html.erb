@@ -1,0 +1,5 @@
+<% @testimonials.each do |testimonial| %>
+  <%= render partial: "testimonials/square", locals: { testimonial: testimonial } %>
+  <%= render partial: "testimonials/modal", locals: { testimonial: testimonial } %>
+<% end %>
+<%= render partial: "testimonials/script", locals: { testimonial: @testimonials } %>

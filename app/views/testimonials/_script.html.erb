@@ -1,0 +1,9 @@
+<script>
+  $( document ).ready(function() {
+    <% @testimonials.each do |testimonial| %>
+      $('#img-<%= testimonial.id %>').click(function() {
+        $('#img-<%= testimonial.id %>-modal').modal('show');
+      });
+    <% end %>
+  });
+</script>

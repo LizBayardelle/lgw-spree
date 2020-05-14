@@ -1,0 +1,52 @@
+
+<%= simple_form_for(@testimonial) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs row">
+    <div class="col-12">
+      <%= f.input :title %>
+      <%= f.input :description %>
+    </div> <!-- col -->
+    <div class="col-12">
+       <label>Upload a Photo</label>
+       <%= f.input :photo, label: false %>
+    </div> <!-- col-12 -->
+    <% if spree_current_user && spree_current_user.admin? %>
+      <div class="col-12">
+        <h3 class="pt-3">What products are in this testimonial?</h3>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :airblades %>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :fans %>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :vacuums %>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :lighting %>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :accessories %>
+      </div> <!-- col -->
+      <div class="col-12">
+        <h3 class="pt-3">Where should this be displayed??</h3>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :homepage %>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :category_pages %>
+      </div> <!-- col -->
+      <div class="col-12 col-sm-4">
+        <%= f.input :testimonials %>
+      </div> <!-- col -->
+    <% end %>
+  </div> <!-- row -->
+
+  <div class="form-actions text-center py-3">
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

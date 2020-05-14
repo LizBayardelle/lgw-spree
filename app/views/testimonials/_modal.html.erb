@@ -1,0 +1,18 @@
+<div class="modal fade" id="img-<%= testimonial.id %>-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-white p-5">
+      <h3 class="text-center"><%= testimonial.title %></h3>
+      <% if testimonial.photo.attached? %>
+        <%= image_tag testimonial.photo %>
+      <% end %>
+      <p class="pt-3"><%= testimonial.description %></p>
+      <% if spree_current_user && spree_current_user.admin? %>
+        <p class="text-center">
+          <%= link_to 'Edit', edit_testimonial_path(testimonial) %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'Delete', testimonial, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

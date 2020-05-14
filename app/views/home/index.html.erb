@@ -70,9 +70,9 @@
 
 
 <!-- Page Content -->
-<div class="container pt-5">
+<main class="container pt-5">
 
-  <div class="row">
+  <section class="row">
     <div class="col-md-8 mb-5">
       <h2>What We Do</h2>
       <hr>
@@ -109,19 +109,23 @@
         <br><%= mail_to "ellenm@lagunagreenworks.com" %>
       </address>
       <strong>Online Support</strong>
-      <br><%= link_to "Contact Us", main_app.new_contact_path, class: "btn-bubble" %>
+      <br><%= link_to "Contact Us", main_app.new_contact_path(anchor: "contact"), class: "btn-bubble" %>
     </div>
-  </div>
-  <!-- /.row -->
+  </section>
 
-  <div class="row blue-title">
+
+
+
+
+
+  <section class="row blue-title">
     <div class="col-sm-6 col-lg-3 mb-5">
       <div class="card h-100">
         <%= image_tag "hand-dryers-2.jpg", class: "card-img-top" %>
         <div class="card-body h-50">
           <h4 class="card-title">Hand Dryers</h4>
           <p class="card-text">
-            Dyson’s LEED-certified Airblades quickly dry hands with HEPA-filtered air and save on costs, washroom space, CO<sub>2</sub>, and mess.  Choose from the new, highly efficient 9kJ, the Airblade V and the classic dB, or select an all-in-one Wash+Dry option.
+            Dyson’s LEED-certified Airblades quickly dry hands with HEPA-filtered air and save on costs, washroom space, CO<sub>2</sub>, and mess.  Choose from the new, highly efficient 9kJ, the Airblade V and the classic dB, or select an all-in-one&nbsp;Wash+Dry&nbsp;option.
           </p>
         </div>
         <div class="card-bottom text-center">
@@ -136,7 +140,7 @@
         <div class="card-body h-50">
           <h4 class="card-title">Air Quality</h4>
           <p class="card-text">
-            Create a cleaner, more comfortable working environment with a Dyson purifying system. Choose from the Pure Hot+Cool or Pure Cool air quality monitors. The HEPA layer captures 99.97% of allergens and pollutants. We also carry additional fan options.
+            Create a cleaner, more comfortable working environment with a Dyson purifying system. Choose from the Pure Hot+Cool or Pure Cool air quality monitors. The HEPA layer captures 99.97% of allergens and pollutants. We also carry&nbsp;additional&nbsp;fan&nbsp;options.
           </p>
         </div>
         <div class="card-bottom text-center">
@@ -151,7 +155,7 @@
         <div class="card-body h-50">
           <h4 class="card-title">Floor Care</h4>
           <p class="card-text">
-            Powerfully clean your work environment with a cordless vacuum that intelligently changes your motor speed as it moves from carpet to hard surfaces. Deep cleaning vacuum heads pull ground in dirt from carpets and dust from floors and upholstery.  Auto, Boost and Eco modes give you options to make the most of your run times.
+            Powerfully clean your work environment with a cordless vacuum that intelligently changes your motor speed as it moves from carpet to hard surfaces.  Auto, Boost and Eco modes give you options to make the most of&nbsp;your&nbsp;run&nbsp;times.
           </p>
         </div>
         <div class="card-bottom text-center">
@@ -166,7 +170,7 @@
         <div class="card-body h-50">
           <h4 class="card-title">Lighting</h4>
           <p class="card-text">
-            Flexible and powerful LED light that efficiently illuminates more with less energy to increase your business performance.
+            Flexible and powerful LED light that efficiently illuminates more with less energy to increase your&nbsp;business&nbsp;performance.
           </p>
         </div>
         <div class="card-bottom text-center">
@@ -175,8 +179,30 @@
       </div> <!-- card -->
     </div> <!-- col -->
 
+  </section>
 
-  </div> <!-- row -->
 
-</div>
-<!-- /.container -->
+
+
+
+  <section class="mb-5">
+    <h2>Testimonials & Customer Photos</h2>
+
+    <div class="row">
+
+      <% @testimonials.each do |testimonial| %>
+        <%= render partial: "testimonials/square", locals: { testimonial: testimonial } %>
+        <%= render partial: "testimonials/modal", locals: { testimonial: testimonial } %>
+      <% end %>
+      <%= render partial: "testimonials/script", locals: { testimonial: @testimonials } %>
+
+      <div class="col-12 text-center">
+        <%= link_to "See More Customer Photos", page_path('testimonials'), class: "btn-bubble" %>
+      </div>
+
+
+    </div> <!-- row -->
+  </section>
+
+
+</main> <!-- /.container -->

@@ -27,7 +27,7 @@
               <li class="mb-0"> <%= link_to "Warranty Information", main_app.page_path("warranty-information") %> </li>
               <% if current_spree_user && current_spree_user.admin? %>
                 <li class="mb-0"> <%= link_to "Spree Backend", spree.admin_path %> </li>
-                <li class="mb-0"> <%= link_to "Admin Portal", main_app.home_admin_path %> </li>
+                <li class="mb-0"> <%= link_to "Admin Portal", main_app.admin_management_path %> </li>
               <% else %>
                 <li class="mb-0"> <%= link_to "Admin Login", spree.admin_path %> </li>
               <% end %>
@@ -38,7 +38,7 @@
             <h6>Our Mission</h6>
             <p>We provide innovative products that promote environmentally sustainable practices.</p>
             <%= link_to "Products", spree.root_path, class: "btn-bubble" %><br>
-            <%= link_to "Contact Us", main_app.new_contact_path, class: "btn-bubble" %>
+            <%= link_to "Contact Us", main_app.new_contact_path(anchor: "contact"), class: "btn-bubble" %>
 
             <div class="sm-icons mt-2">
               <a href="https://www.facebook.com/Laguna-Greenworks-LLC-100257714710736" target="_blank"><i class="fab fa-facebook-square"></i></a>

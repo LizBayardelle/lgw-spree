@@ -204,6 +204,12 @@ label { text-transform: capitalize; }
   text-align: center;
 }
 
+
+.hover-overlay * {
+  font-size: 1rem;
+}
+
+
 .hover-text p { margin-bottom: 10px; }
 
 
@@ -428,8 +434,8 @@ ul.submenu li a:hover{
 .clouds-background {
   min-height: 200px;
   background: linear-gradient(
-    rgba(75, 119, 190, 0.3),
-    rgba(75, 119, 190, 0.3)
+    rgba(137, 196, 244, .5),
+    rgba(137, 196, 244, .5)
   ),
   url("https://lagunagreenworks.s3-us-west-1.amazonaws.com/Images/clouds.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
