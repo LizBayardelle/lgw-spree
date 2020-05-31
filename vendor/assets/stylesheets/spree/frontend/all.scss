@@ -32,7 +32,6 @@ $transparent-blue: rgba(31, 108, 228, 0.5);
 
 
 
-
 label.nav-link {
   padding: 13px 8px;
   margin-top: 3px;
@@ -82,7 +81,7 @@ a.cart-info {
 .taxonomy-root, .product-body a span.info {
   color: $color-grey;
   font-weight: 200 !important;
-  font-size: 1.1em !important;
+  font-size: .9em !important;
 }
 
 .taxonomy-root, .product-body a:hover {
@@ -134,7 +133,6 @@ a.list-group-item.active {
   border-color: $color-green;
   color: white !important;
 }
-
 
 
 
