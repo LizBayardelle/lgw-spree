@@ -838,6 +838,8 @@ GEM
     htmlentities (4.3.4)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    invisible_captcha (2.0.0)
+      rails (>= 5.0)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -1110,6 +1112,7 @@ DEPENDENCIES
   font_awesome5_rails
   friendly_id (~> 5.2.4)
   high_voltage (~> 3.1)
+  invisible_captcha
   jbuilder (~> 2.5)
   jquery-matchheight-rails
   jquery-rails

@@ -24,6 +24,7 @@ gem 'font_awesome5_rails'
 gem 'tinymce-rails'
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'friendly_id', '~> 5.2.4'
+gem 'invisible_captcha'
 
 gem 'mini_magick'
 gem 'aws-sdk' , '~> 3'
