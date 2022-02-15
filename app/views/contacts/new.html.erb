@@ -5,10 +5,7 @@
   <div class="container">
     <h1 class="display-3">About Laguna Greenworks</h1>
     <p class="lead" style="line-height: 1.2">
-      CEO Mallory McCamant founded Laguna Greenworks in 2009 in Laguna Beach, California. As the business grew, a regional office was opened in San Mateo, California in 2019.
-    </p>
-    <p class="lead" style="line-height: 1.2">
-      Laguna Greenworks is a certified California Small Business and a certified Woman-Owned Small Business.
+      CEO Mallory McCamant founded Laguna Greenworks in 2009 in Laguna Beach, California. As the business grew, a regional office was opened in Northern California in 2019, which is now located in Sacramento, California.
     </p>
     <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
     <%= link_to "See Customer Photos", page_path("testimonials"), class: "btn btn-primary btn-lg" %>
@@ -85,4 +82,26 @@
       <%= render 'form', contact: @contact %>
     </div> <!-- container -->
   </div> <!-- jumbotron -->
+
+
+
+  <section class="my-5 container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center mb-3">Get in Touch</h2>
+      </div> <!-- col -->
+      <div class="col-sm-6">
+        <strong>Southern California</strong>
+        <br>309 Agate Street
+        <br>Laguna Beach, CA 92651
+        <br><%= tel_to("949-371-3310") %>
+        <br><%= mail_to "info@lagunagreenworks.com" %>
+      </div>
+      <div class="col-sm-6">
+        <strong>Northern California</strong>
+        <br><%= tel_to("650-730-6523") %>
+        <br><%= mail_to "ellenm@lagunagreenworks.com" %>
+      </div>
+    </div>
+  </section> 
 <!-- /.container -->
