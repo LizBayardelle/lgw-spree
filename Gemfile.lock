@@ -1247,7 +1247,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.1.9)
+    concurrent-ruby (1.1.10)
     crass (1.0.6)
     css_parser (1.10.0)
       addressable
@@ -1284,12 +1284,12 @@ GEM
       railties (>= 4.2)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
-    globalid (0.5.2)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     high_voltage (3.1.2)
     highline (2.0.3)
     htmlentities (4.3.4)
-    i18n (1.8.11)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     invisible_captcha (2.0.0)
       rails (>= 5.0)
@@ -1334,7 +1334,7 @@ GEM
       rake
     mini_magick (4.9.5)
     mini_mime (1.1.2)
-    minitest (5.14.4)
+    minitest (5.15.0)
     monetize (1.11.0)
       money (~> 6.12)
     money (6.16.0)
@@ -1526,7 +1526,7 @@ GEM
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.0)
       tzinfo
-    tzinfo (1.2.9)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
