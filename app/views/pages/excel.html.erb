@@ -1,0 +1,109 @@
+<section class="page-breadcrumbs">
+  <div class="container-fluid px-5">
+    <p class="font-weight-bold">
+      Excel Premium Products
+      &nbsp;&nbsp;>&nbsp;&nbsp;
+      Hand Dryers
+    </p>
+  </div> <!-- container -->
+</section> <!-- breadcrumbs -->
+
+
+<main id="excel" class="product-page">
+
+  <section class="container-fluid px-5 my-5">
+    <div class="row justify-content-center">
+
+      <div class="col-12 col-sm-4 col-xl-3">
+        <div class="main-image-container">
+          <div class="sizer"></div>
+          <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/ThinAirWhite_BottomRightAngle.jpg" id="main1" class="main-image">
+          <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/XL-SP-H-Bone.jpeg" id="main2" class="main-image hidden">
+          <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/XLERATORGraphite_BottomAngle.jpg" id="main4" class="main-image hidden">
+          <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/XLERATOR_SoldierOn_Camo.jpg" id="main5" class="main-image hidden">
+        </div> <!-- main image container -->
+
+        <div class="thumb-container container-fluid">
+          <div class="row text-center">
+            <div class="col thumb-col active z-depth-1" id="thumb1">
+              <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/ThinAirWhite_BottomRightAngle.jpg" class="thumbnail">
+            </div> <!-- col -->
+            <div class="col thumb-col" id="thumb2">
+              <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/XL-SP-H-Bone.jpeg" class="thumbnail">
+            </div> <!-- col -->
+            <div class="col thumb-col" id="thumb4">
+              <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/XLERATORGraphite_BottomAngle.jpg" class="thumbnail">
+            </div> <!-- col -->
+            <div class="col thumb-col" id="thumb5">
+              <img src="https://lagunagreenworks.s3.us-west-1.amazonaws.com/Images/Excel/XLERATOR_SoldierOn_Camo.jpg" class="thumbnail">
+            </div> <!-- col -->
+          </div> <!-- row -->
+        </div> <!-- col -->
+      </div> <!-- col -->
+
+      <div class="col-12 col-sm-8 col-xl-9">
+        <h1 class="pb-4">Excel Hand Dryers</h1>
+        <p class="big-p">
+          Excel's range of premium hand dryers dry hands quickly and with lower costs.
+        </p>
+        <p><em>
+          <strong>Models: </strong>
+          <ul style="line-height: 1;">
+            <li>Thin Air</li>
+            <li>XLERATOR</li>
+            <li>XLERATOR Special Image</li>
+            <li>XLERATOR Special Paint</li>
+            <li>XLERATOR with HEPA</li>
+            <li>EXLERATOReco</li>
+            <li>EXLERATOReco with HEPA</li>
+          </ul>
+        </em></p>
+        <%#= link_to "Shop Excel", spree.root_path, class: "btn btn-primary" %>
+      </div> <!-- col -->
+
+    </div> <!-- row -->
+  </section>
+
+</main>
+
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function() {
+    $("#thumb1").click(function(){
+      $(".main-image").addClass("hidden");
+      $(".thumb-col").removeClass("active z-depth-1");
+      $("#thumb1").addClass("active z-depth-1");
+      $('#main1').removeClass("hidden");
+    });
+    $("#thumb2").click(function(){
+      $(".main-image").addClass("hidden");
+      $(".thumb-col").removeClass("active z-depth-1");
+      $("#thumb2").addClass("active z-depth-1");
+      $('#main2').removeClass("hidden");
+    });
+    $("#thumb3").click(function(){
+      $(".main-image").addClass("hidden");
+      $(".thumb-col").removeClass("active z-depth-1");
+      $("#thumb3").addClass("active z-depth-1");
+      $('#main3').removeClass("hidden");
+    });
+    $("#thumb4").click(function(){
+      $(".main-image").addClass("hidden");
+      $(".thumb-col").removeClass("active z-depth-1");
+      $("#thumb4").addClass("active z-depth-1");
+      $('#main4').removeClass("hidden");
+    });
+    $("#thumb5").click(function(){
+      $(".main-image").addClass("hidden");
+      $(".thumb-col").removeClass("active z-depth-1");
+      $("#thumb5").addClass("active z-depth-1");
+      $('#main5').removeClass("hidden");
+    });
+  });
+</script>
